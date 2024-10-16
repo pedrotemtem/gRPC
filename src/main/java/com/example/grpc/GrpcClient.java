@@ -15,7 +15,10 @@ public class GrpcClient {
         GreeterBlockingStub stub = GreeterGrpc.newBlockingStub(channel);
 
         HelloReply response = stub.sayHello(HelloRequest.newBuilder()
-                .setName("World")
+                .setName("Vase")
+                .setPrice(99.9f)
+                .setDescription("orange Pot")
+                .setImage("/images/orange.jpg")
                 .build());
 
         System.out.println(response.getMessage());
