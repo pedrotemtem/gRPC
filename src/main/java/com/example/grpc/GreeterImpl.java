@@ -9,6 +9,8 @@ public class GreeterImpl extends GreeterImplBase {
 
     @Override
     public void sayHello(HelloRequest request, StreamObserver<HelloReply> responseObserver) {
+        System.out.println("Received request: " + request);
+
         // Accessing all attributes from the request
         String name = request.getName();
         float price = request.getPrice();  // Directly access the float field
